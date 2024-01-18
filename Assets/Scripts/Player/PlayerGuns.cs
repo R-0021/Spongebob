@@ -86,7 +86,7 @@ public class PlayerGuns : MonoBehaviour
 
 	void HandleHitObject(GameObject hitObject)
 	{
-		Destroy(hitObject);
+		hitObject.GetComponent<PhotonView>().RPC("TakeZombieDamage", RpcTarget.All, guns[currentGun].damage);
 	}
 
 	void SwitchGun(int index)

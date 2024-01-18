@@ -3798,10 +3798,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1270129652902549643, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: spawnPoints.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1270129652902549643, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 243659001}
@@ -3832,34 +3828,6 @@ PrefabInstance:
     - target: {fileID: 4707145433208431447, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
       propertyPath: m_Name
       value: RoomManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247951860550091153, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 91.44578
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247951860550091153, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.411406
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247951860550091153, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 41.21132
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247951860550091153, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.48754144
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247951860550091153, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.009948045
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247951860550091153, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.87286156
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247951860550091153, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.017807283
       objectReference: {fileID: 0}
     - target: {fileID: 7602537744576271024, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
       propertyPath: spawnPoints.Array.data[0]

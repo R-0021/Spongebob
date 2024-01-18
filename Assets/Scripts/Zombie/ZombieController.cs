@@ -63,6 +63,11 @@ public class ZombieController : MonoBehaviour
 
 	void Update()
 	{
+		if(targetPlayer == null)
+		{
+			SetState(ZombieState.Idle);
+		}
+
 		switch (currentState)
 		{
 			case ZombieState.Idle:
@@ -101,6 +106,8 @@ public class ZombieController : MonoBehaviour
 		{
 			SetState(ZombieState.Chase);
 		}
+
+		canAttack = true;
 	}
 
 	void ChaseState()
@@ -124,6 +131,7 @@ public class ZombieController : MonoBehaviour
 			return;
 		}
 
+		navMeshAgent.isStopped = false;
 		navMeshAgent.SetDestination(targetPlayer.position);
 	}
 
@@ -131,14 +139,14 @@ public class ZombieController : MonoBehaviour
 	{
 		if (Vector3.Distance(transform.position, targetPlayer.position) > attackRange)
 		{
-			SetState(ZombieState.Chase);
+			SetState(ZombieState.Idle);
 			return;
 		}
 
 		if (!canAttack)
 			return;
 
-		navMeshAgent.Stop();
+		navMeshAgent.isStopped = true;
 
 		animator.SetTrigger("Attack");
 		handleAttackRoutine = StartCoroutine(HandleAttack());

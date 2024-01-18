@@ -401,7 +401,9 @@ GameObject:
   - component: {fileID: -6006911871587876066}
   - component: {fileID: -9099987133841750508}
   - component: {fileID: -5376243865997952897}
-  m_Layer: 0
+  - component: {fileID: 954901226644318363}
+  - component: {fileID: 6644124526685853754}
+  m_Layer: 6
   m_Name: Zombie-GasGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +420,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9006178857528677185}
@@ -508,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  chaseRange: 50
+  chaseRange: 10000
   attackRange: 3
   attackTime: 1
   attackDamage: 5
@@ -532,6 +534,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -9099987133841750508}
+  - {fileID: -5376243865997952897}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -565,8 +568,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 9
+    SynchronizeType: 1
+    Name: Attack
+  - Type: 4
+    SynchronizeType: 1
+    Name: Chase
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
+--- !u!114 &954901226644318363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3794244422675003394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d66693b7a2a7f249acab885db33fdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!136 &6644124526685853754
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3794244422675003394}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &4217664953613406807
 GameObject:
   m_ObjectHideFlags: 0
