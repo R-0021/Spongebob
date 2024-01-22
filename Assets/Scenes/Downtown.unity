@@ -3798,6 +3798,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1270129652902549643, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
+      propertyPath: limit
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270129652902549643, guid: 587f0adc6a82a5842a96a410e334eb29, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 243659001}

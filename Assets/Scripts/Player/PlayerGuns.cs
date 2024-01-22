@@ -8,6 +8,7 @@ public class PlayerGuns : MonoBehaviour
 	public class Gun
 	{
 		public GameObject gameObject;
+		public GameObject gunPoint;
 		public int damage = 10;
 		public int fireRate = 10;
 		public int clipSize = 10;
@@ -31,6 +32,9 @@ public class PlayerGuns : MonoBehaviour
 
 	[SerializeField] private PhotonView playerSetupView;
 
+    [SerializeField] private GameObject vfxHit;
+    [SerializeField] private GameObject vfxGunpoint;
+
 	private int CurrentGun
 	{
 		get { return currentGun; }
@@ -52,7 +56,6 @@ public class PlayerGuns : MonoBehaviour
 
 	void Update()
 	{
-
 		if (canShoot && Input.GetMouseButton(0))
 		{
 			StartCoroutine(HandleFireRate());
@@ -72,8 +75,15 @@ public class PlayerGuns : MonoBehaviour
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 		RaycastHit hit;
 
-		if (Physics.Raycast(ray, out hit, shootingRange, shootableLayer))
+		if (Physics.Raycast(ray, out hit, shootingRange))
+		{
 			HandleHitObject(hit.collider.gameObject);
+			PhotonNetwork.Instantiate(vfxHit.name, hit.point, Quaternion.identity);
+		}	
+
+		GameObject vfx = Instantiate(vfxGunpoint, guns[currentGun].gunPoint.transform.position, Quaternion.identity);
+		vfx.transform.SetParent(guns[currentGun].gunPoint.transform);
+		Destroy(vfx, 0.5f);
 
 		clip--;
 		if (clip <= 0)
@@ -86,7 +96,8 @@ public class PlayerGuns : MonoBehaviour
 
 	void HandleHitObject(GameObject hitObject)
 	{
-		hitObject.GetComponent<PhotonView>().RPC("TakeZombieDamage", RpcTarget.All, guns[currentGun].damage);
+		if(hitObject.GetComponent<ZombieHealth>())
+			hitObject.GetComponent<PhotonView>()?.RPC("TakeZombieDamage", RpcTarget.AllBuffered, guns[currentGun].damage);
 	}
 
 	void SwitchGun(int index)

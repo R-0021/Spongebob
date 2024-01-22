@@ -1138,7 +1138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1047719114884487403
 Transform:
   m_ObjectHideFlags: 0
@@ -1157,6 +1157,7 @@ Transform:
   - {fileID: 1047827004268213289}
   - {fileID: 1047839460911677283}
   - {fileID: 1050802190385725575}
+  - {fileID: 3927403392609592269}
   m_Father: {fileID: 5951980558981489749}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &1077435379974181805
@@ -1767,7 +1768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1587297866177215636
 Transform:
   m_ObjectHideFlags: 0
@@ -2284,7 +2285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1978794246388315379
 Transform:
   m_ObjectHideFlags: 0
@@ -2300,6 +2301,7 @@ Transform:
   m_Children:
   - {fileID: 1974858121175020323}
   - {fileID: 1975046087981065585}
+  - {fileID: 56153703562321040}
   m_Father: {fileID: 5951980558981489749}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &1945955082166896067
@@ -2726,6 +2728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guns:
   - gameObject: {fileID: 3910171200524094120}
+    gunPoint: {fileID: 8116951416939780576}
     damage: 30
     fireRate: 5
     clipSize: 7
@@ -2733,15 +2736,8 @@ MonoBehaviour:
     recoilForce: 0.7
     recoilTime: 0.1
     gunSound: {fileID: 8300000, guid: 7280686c1c5e02f4f9c58d7c54058715, type: 3}
-  - gameObject: {fileID: 2638164199739322586}
-    damage: 10
-    fireRate: 15
-    clipSize: 30
-    reloadTime: 1
-    recoilForce: 0.3
-    recoilTime: 0.075
-    gunSound: {fileID: 8300000, guid: ffa976eac6484824490b509b70902f88, type: 3}
   - gameObject: {fileID: 1980847087816346965}
+    gunPoint: {fileID: 4867823887107284902}
     damage: 100
     fireRate: 2
     clipSize: 8
@@ -2750,6 +2746,7 @@ MonoBehaviour:
     recoilTime: 0.4
     gunSound: {fileID: 8300000, guid: 7b125e65b6d7b3443a4e2138dcf899e0, type: 3}
   - gameObject: {fileID: 1046964415582024187}
+    gunPoint: {fileID: 8703372115899559459}
     damage: 40
     fireRate: 10
     clipSize: 30
@@ -2757,20 +2754,14 @@ MonoBehaviour:
     recoilForce: 1
     recoilTime: 0.15
     gunSound: {fileID: 8300000, guid: 5cac43e9cd95d424cb5a267d31f502ac, type: 3}
-  - gameObject: {fileID: 1588741493315951254}
-    damage: 15
-    fireRate: 15
-    clipSize: 200
-    reloadTime: 8
-    recoilForce: 1.7
-    recoilTime: 0.1
-    gunSound: {fileID: 8300000, guid: ec35bd9b8fb5fff43bc0d86b22cae09c, type: 3}
   shootingRange: 100
   shootableLayer:
     serializedVersion: 2
     m_Bits: 64
   clipText: {fileID: 3175205800627939424}
   playerSetupView: {fileID: 5627217498894626480}
+  vfxHit: {fileID: 5471475680510191570, guid: 7433f410de14e5148be1d4421807a8b2, type: 3}
+  vfxGunpoint: {fileID: 5471475680510191570, guid: f45275aed8882c140843aeb9bf291be8, type: 3}
 --- !u!114 &1108743332285386362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3394,7 +3385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2634095051564304728
 Transform:
   m_ObjectHideFlags: 0
@@ -4808,7 +4799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3914800774250228412
 Transform:
   m_ObjectHideFlags: 0
@@ -4824,6 +4815,7 @@ Transform:
   m_Children:
   - {fileID: 3912192866820232128}
   - {fileID: 3914917249643052514}
+  - {fileID: 5804643992498508896}
   m_Father: {fileID: 5951980558981489749}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!114 &4916869010839444386
@@ -5400,6 +5392,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4867823887107284902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 56153703562321040}
+  m_Layer: 0
+  m_Name: BM4 Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &56153703562321040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867823887107284902}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0019, z: -0.479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1978794246388315379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4875204916107300924
 GameObject:
   m_ObjectHideFlags: 0
@@ -6441,6 +6464,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &8116951416939780576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5804643992498508896}
+  m_Layer: 0
+  m_Name: M1911 Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5804643992498508896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116951416939780576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0283, z: -0.1498}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3914800774250228412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8283773973082963558
 GameObject:
   m_ObjectHideFlags: 0
@@ -6697,6 +6751,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8703372115899559459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3927403392609592269}
+  m_Layer: 0
+  m_Name: M4 Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3927403392609592269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8703372115899559459}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0592, z: -0.3392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1047719114884487403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8910437401148247557
 GameObject:
   m_ObjectHideFlags: 0

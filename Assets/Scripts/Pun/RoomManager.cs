@@ -17,7 +17,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject nameUI;
     [SerializeField] private GameObject connectingUI;
 
-
+    
     private string nickName = "unnamed";
 
     private void Awake() => Instance = this;

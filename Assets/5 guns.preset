@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 5 guns
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 8b765771c68a68f4797128620ab21252, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.size
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].gameObject
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].gunPoint
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].damage
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].fireRate
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].clipSize
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].reloadTime
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].recoilForce
+    value: 0.7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].recoilTime
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[0].gunSound
+    value: 
+    objectReference: {fileID: 8300000, guid: 7280686c1c5e02f4f9c58d7c54058715, type: 3}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].gameObject
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].gunPoint
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].damage
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].fireRate
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].clipSize
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].reloadTime
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].recoilForce
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].recoilTime
+    value: 0.075
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[1].gunSound
+    value: 
+    objectReference: {fileID: 8300000, guid: ffa976eac6484824490b509b70902f88, type: 3}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].gameObject
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].gunPoint
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].damage
+    value: 100
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].fireRate
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].clipSize
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].reloadTime
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].recoilForce
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].recoilTime
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[2].gunSound
+    value: 
+    objectReference: {fileID: 8300000, guid: 7b125e65b6d7b3443a4e2138dcf899e0, type: 3}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].gameObject
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].gunPoint
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].damage
+    value: 40
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].fireRate
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].clipSize
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].reloadTime
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].recoilForce
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].recoilTime
+    value: 0.15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[3].gunSound
+    value: 
+    objectReference: {fileID: 8300000, guid: 5cac43e9cd95d424cb5a267d31f502ac, type: 3}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].gameObject
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].gunPoint
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].damage
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].fireRate
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].clipSize
+    value: 200
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].reloadTime
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].recoilForce
+    value: 1.7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].recoilTime
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: guns.Array.data[4].gunSound
+    value: 
+    objectReference: {fileID: 8300000, guid: ec35bd9b8fb5fff43bc0d86b22cae09c, type: 3}
+  - target: {fileID: 0}
+    propertyPath: shootingRange
+    value: 100
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: shootableLayer.m_Bits
+    value: 64
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: clipText
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: playerSetupView
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: vfxHit
+    value: 
+    objectReference: {fileID: 5471475680510191570, guid: 7433f410de14e5148be1d4421807a8b2, type: 3}
+  - target: {fileID: 0}
+    propertyPath: vfxGunpoint
+    value: 
+    objectReference: {fileID: 5471475680510191570, guid: f45275aed8882c140843aeb9bf291be8, type: 3}
+  m_ExcludedProperties: []

@@ -8,6 +8,9 @@ public class ZombieManager : MonoBehaviour
 {
     public static ZombieManager Instance { get; private set; }
 
+    [SerializeField] private int limit = 10;
+
+
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
@@ -21,9 +24,12 @@ public class ZombieManager : MonoBehaviour
 
     public void SpawnZombie()
     {
+        //if (ZombieCount.Count() >= limit) return;
+
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
         GameObject _zombie = PhotonNetwork.Instantiate(zombie.name, spawnPoint.position, Quaternion.identity);
+
     }
 
     public IEnumerator SpawnZombies()
@@ -31,9 +37,13 @@ public class ZombieManager : MonoBehaviour
         while(true)
         {
 			yield return new WaitForSeconds(3);
-			SpawnZombie();
-			SpawnZombie();
-			SpawnZombie();
+            if (ZombieCount.Count() <= limit)
+            {
+			    SpawnZombie();
+			    SpawnZombie();
+			    SpawnZombie();  
+                ZombieCount.Increase(3);
+            } 
 		}
     }
 }

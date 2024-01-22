@@ -36,14 +36,9 @@ public class ZombieController : MonoBehaviour
 		SetState(ZombieState.Idle);
 	}
 
-	void FindPlayers()
-	{
-		players = GameObject.FindGameObjectsWithTag("Player");
-	}
-
 	void UpdateTarget()
 	{
-		FindPlayers();
+		players = GameObject.FindGameObjectsWithTag("Player");
 
 		int closestPlayer = 0;
 		float distanceToClosestPlayer = Mathf.Infinity;
@@ -156,8 +151,7 @@ public class ZombieController : MonoBehaviour
 	{
 		canAttack = false;
 		yield return new WaitForSeconds(attackTime / 2);
-		Debug.Log("Attack");
-		//targetPlayer.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, attackDamage);
+		targetPlayer.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, (int)attackDamage);
 		yield return new WaitForSeconds(attackTime / 2);
 		canAttack = true;
 		handleAttackRoutine = null;
